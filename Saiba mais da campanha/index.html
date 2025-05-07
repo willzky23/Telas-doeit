@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microsoft</title>
+  <link rel="stylesheet" href="style/style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="light-theme duration-200 mb-10">
+
+
+    <!-- Cabeçalho da página (navbar) -->
+    <header class="mt-5">
+      <div class="px-4 mx-auto sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 lg:h-20">
+          
+          <!-- Logotipo -->
+          <div class="flex-shrink-0">
+            <a href="#" class="flex">
+              <img class="w-auto ml-5 h-8" src="assets/logo1.svg" alt="" />
+            </a>
+          </div>
+  
+          <!-- Container do conteúdo da navbar -->
+          <div class="flex items-center justify-between w-full md:w-auto">
+            
+            <div class="relative">
+              <svg id="lupa" xmlns="http://www.w3.org/2000/svg" class="absolute top-0 bottom-0 w-6 h-6 my-auto text-gray-400 left-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              <input id="pesquisa" type="text" placeholder="Search" class="w-96 py-3 pl-12 pr-4 text-gray-500 border rounded-md outline-none bg-gray-50 focus:bg-white"/>
+            </div>
+
+            <!-- Links visíveis apenas em telas médias e grandes -->
+            <div id="meutext" class="hidden md:flex ml-auto items-center justify-center space-x-6 lg:space-x-10">
+              <form onSubmit="event.preventDefault();" class="max-w-md px-4 mx-auto mt-12">
+                
+            </form>
+          
+
+              <a href="#secao4" id="texts" class="text-base font-semibold transition-all duration-100">Sobre</a>
+  
+              <!-- Separador -->
+              <div class="w-px h-5 bg-black/20"></div>
+  
+              <!-- Botão Entrar -->
+              <a href="#" class="inline-flex items-center justify-center px-5 ml-10 py-2.5 text-base font-semibold border-2 transition-all duration-100" role="button">Criar Campanha</a>
+            </div>
+  
+            <!-- Botão de alternância de tema visível apenas em telas pequenas -->
+            <button id="theme-toggle" class="block md:hidden">
+              <img src="assets/sol.svg" id="sol" class="w-6 h-6">
+              <img src="assets/lua.svg" id="lua" class="w-6 h-6">
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+  
+    <!-- Navbar mobile com botão hamburguer -->
+    <div id="menunav" class="container mx-auto flex justify-between items-center">
+  
+      <!-- Botão para abrir o menu mobile -->
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-8 h-8" fill="white" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16m-7 6h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+  
+      <!-- Menu que aparece ao clicar no botão (invisível inicialmente) -->
+      <div id="mobile-menu" class="hidden absolute top-16 left-4 text-center shadow-lg rounded-lg p-3 w-48 md:hidden">
+        
+        <a href="#secao4" id="infor" class="block py-2">Sobre</a>
+        <a href="#" class="inline-flex items-center justify-center px-5 py-2.5 text-base font-semibold border-2 transition-all duration-100" role="button">Criar Campanha</a>
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 ">
+      <div class="relative mt-12 lg:mt-20">
+        <div class="absolute inset-x-0 hidden xl:px-44 top-2 md:block md:px-20 lg:px-28">
+          <img class="w-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/steps/2/curved-dotted-line.svg" alt="" />
+        </div>
+    
+        <div class="relative grid grid-cols-1 gap-y-12 md:grid-cols-2 gap-x-12">
+          <!-- Coluna 1 -->
+          <div class="text-center rounded-2xl bg-[#F6F6EF] p-6 shadow-md">
+
+  
+            <h2 class="text-3xl text-black font-bold mb-6">Doação de roupa</h2>
+          
+            <img src="assets/doacao.jpg" alt="Imagem ilustrativa" class="rounded-lg mb-6">
+          
+            <div class="flex items-center justify-between bg-white p-2 rounded-lg mb-6">
+              <input type="text" readonly value="https://seulink.com" class="flex-1 bg-transparent text-green-700 outline-none text-sm text-gray-700 px-2">
+              <button class="bg-[#5FCB69] text-white text-sm font-medium px-4 py-1 rounded">Copiar</button>
+            </div>
+          
+            <h3 class="text-xl font-semibold mb-2 text-black">Descrição</h3>
+            <p class="text-gray-700 mb-4 text-sm leading-relaxed text-black">
+              Crie sua conta gratuita para participar das campanhas e ajudar quem precisa. Com sua conta, você poderá apoiar iniciativas, doar e divulgar ações solidárias. Participe agora e faça parte dessa corrente do bem!
+            </p>
+          
+ 
+          
+          </div>
+          
+
+          <div class="text-center rounded-2xl bg-[#F6F6EF] p-6 shadow-md text-black">
+            <!-- Coluna 2 -->
+            <h3 class="mt-6 text-xl font-semibold leading-tight md:mt-10">Sobre a campanha</h3>
+
+            <div class="flex mt-9 text-base font-semibold text-left">
+              <p class="mr-1">Dono da campanha:</p>
+              <p class="font-light">Guilherme Morais</p>
+            </div>
+            
+            <div class="flex text-base font-semibold text-left">
+              <p class="mr-1">Apoiadores:</p>
+              <p class="font-light">2</p>
+            </div>
+            
+            <div class="flex text-base font-semibold text-left">
+              <p class="mr-1">Arrecadados:</p>
+              <p class="font-light">5</p>
+            </div>
+            
+            <div class="flex text-base font-semibold text-left">
+              <p class="mr-1">Nossa meta:</p>
+              <p class="font-light">1000 peças</p>
+            </div>
+            
+            <div class="flex text-base font-semibold text-left">
+              <p class="mr-1">Id da campanha:</p>
+              <p class="font-light">Bgftr564783</p>
+            </div>
+            
+            <h3 class="mt-8 mb-2 text-base font-semibold text-left">Local da campanha</h3>
+            
+            <div class="flex text-base font-semibold text-left">
+              <p class="mr-1">CEP:</p>
+              <p class="font-light">59920-000</p>
+            </div>
+            
+            <div class="flex text-base font-semibold text-left">
+              <p class="mr-1">Rua:</p>
+              <p class="font-light">Rua Jasinto Leite</p>
+            </div>
+            
+            <div class="flex text-base font-semibold text-left">
+              <p class="mr-1">Cidade:</p>
+              <p class="font-light">Pau dos Ferros</p>
+            </div>
+            
+            <div class="flex text-base font-semibold text-left">
+              <p class="mr-1">Dia de coleta:</p>
+              <p class="font-light">01/02/2024</p>
+            </div>
+            
+            <div class="flex text-base font-semibold text-left">
+              <p class="mr-1">Horário:</p>
+              <p class="font-light">12:00</p>
+            </div>
+            
+
+            <div class="flex items-center w-full max-w-md mt-6">
+ 
+              <span id="percentual" class="text-green-600 font-semibold w-12 text-right mr-2">45%</span>
+              
+     
+              <div class="w-full bg-gray-300 rounded h-4 overflow-hidden">
+                <div id="progress-bar" class="bg-green-500 h-full" style="width: 45%; background-color: #5FCB69;"></div>
+              </div>
+            </div>
+            
+            
+            <div class="flex justify-center mt-8">
+              <a href="#">
+              <button class="text-white font-semibold py-2 px-6 rounded" style="background-color: #5FCB69;">
+                Quero Ajudar
+              </button>
+            </a>
+            </div>
+            
+
+            </p>
+          </div>
+    
+    
+     
+        </div>
+      </div>
+    </div>
+    
+</section>
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+
+
+
+
+
+
+
+      function atualizarBarra(valor) {
+        document.getElementById('percentual').innerText = valor + '%';
+        document.getElementById('progress-bar').style.width = valor + '%';
+      }
+
+      // Teste
+      atualizarBarra(75);
+
+
+
+
+
+
+
+        // Lógica para alternar o tema
+      const themeToggleButton = document.getElementById('theme-toggle');
+      const body = document.body;
+      const sol = document.getElementById('sol');
+      const lua = document.getElementById('lua');
+    
+        // Tamanho fixo inicial
+        const imageSize = "25px";
+        sol.style.width = imageSize;
+        sol.style.height = imageSize;
+        lua.style.width = imageSize;
+        lua.style.height = imageSize;
+    
+        // Exibe o ícone correto baseado no tema inicial
+        sol.style.display = "none";
+        lua.style.display = "inline-block";
+    
+        themeToggleButton.addEventListener('click', () => {
+          if (body.classList.contains('light-theme')) {
+            body.classList.remove('light-theme');
+            body.classList.add('dark-theme');
+            
+    
+            sol.style.display = "inline-block";
+            lua.style.display = "none";
+          } else {
+            body.classList.remove('dark-theme');
+            body.classList.add('light-theme');
+            
+            sol.style.display = "none";
+            lua.style.display = "inline-block";
+          }
+        });
+
+        // Lógica para alternar a visibilidade do menu
+        document.getElementById("menu-toggle").addEventListener("click", function(event) {
+        var menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden"); // Abre/fecha o menu
+        event.stopPropagation();
+        });
+
+    // Fecha o menu ao clicar fora dele
+    document.addEventListener("click", function(event) {
+        var menu = document.getElementById("mobile-menu");
+        var toggleButton = document.getElementById("menu-toggle");
+
+        if (!menu.contains(event.target) && !toggleButton.contains(event.target)) {
+            menu.classList.add("hidden"); // Fecha o menu
+        }
+
+        });
+      </script>
+</body>
+</html>
