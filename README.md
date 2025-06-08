@@ -1,0 +1,1 @@
+Telas referentes ao projeto DoeIt, uma iniciativa voltada para promover doações de itens de necessidade básica para a população das cidades de Pereiro e São Miguel. O objetivo é facilitar e incentivar ações solidárias por meio de uma plataforma acessível e funcional.
